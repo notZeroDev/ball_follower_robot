@@ -1,9 +1,0 @@
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/uninstall.dir
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/ball_follower_description_uninstall.dir
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/test.dir
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/edit_cache.dir
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/rebuild_cache.dir
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/list_install_components.dir
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/install.dir
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/install/local.dir
-/home/zero/ball_follower/build/ball_follower_description/CMakeFiles/install/strip.dir

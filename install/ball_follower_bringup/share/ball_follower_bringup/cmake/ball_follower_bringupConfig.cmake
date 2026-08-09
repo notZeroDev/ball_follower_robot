@@ -1,1 +1,0 @@
-/home/zero/ball_follower/build/ball_follower_bringup/ament_cmake_core/ball_follower_bringupConfig.cmake

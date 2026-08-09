@@ -1,9 +1,0 @@
-source;share/ball_follower_interface_pkg/hook/pythonpath.ps1
-source;share/ball_follower_interface_pkg/hook/pythonpath.dsv
-source;share/ball_follower_interface_pkg/hook/pythonpath.sh
-source;share/ball_follower_interface_pkg/hook/ament_prefix_path.ps1
-source;share/ball_follower_interface_pkg/hook/ament_prefix_path.dsv
-source;share/ball_follower_interface_pkg/hook/ament_prefix_path.sh
-source;../../build/ball_follower_interface_pkg/share/ball_follower_interface_pkg/hook/pythonpath_develop.ps1
-source;../../build/ball_follower_interface_pkg/share/ball_follower_interface_pkg/hook/pythonpath_develop.dsv
-source;../../build/ball_follower_interface_pkg/share/ball_follower_interface_pkg/hook/pythonpath_develop.sh
