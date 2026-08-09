@@ -19,7 +19,6 @@ This workspace contains three ROS 2 packages:
 3. **`ball_follower_interface_pkg`**:
    - Python nodes for teleoperation and automated visual ball tracking:
      - `green_ball_follower`: Real-time HSV color segmentation and tracking for following a green ball.
-     - `human_follower`: Person tracking node using YOLOv8.
      - Teleop nodes (`keyboard`, `keyboard_twist`, `ps3_twist`).
 
 ---
@@ -30,7 +29,7 @@ This workspace contains three ROS 2 packages:
 - **Gazebo**: Gazebo Sim (Ignition / Gazebo Harmonic)
 - **Python Libraries**:
   ```bash
-  pip install opencv-python numpy cv_bridge ultralytics
+  pip install opencv-python numpy cv_bridge
   ```
 
 ---
@@ -63,18 +62,41 @@ To launch the differential drive robot in Gazebo (empty world) with RViz visuali
 ros2 launch ball_follower_bringup ball_follower_gazebo.launch.py
 ```
 
-### 2. Run the Green Ball Follower Node
+### 2. Spawn Balls in Gazebo
+To spawn target balls into the running Gazebo simulation:
+
+- **Green Ball**:
+  ```bash
+  ign service -s /world/empty/create --reqtype ignition.msgs.EntityFactory --reptype ignition.msgs.Boolean --timeout 1000 --req 'sdf: "<sdf version=\"1.6\"><model name=\"green_sphere\"><pose>-7 -2 0.5 0 0 0</pose><link name=\"link\"><visual name=\"visual\"><geometry><sphere><radius>0.2</radius></sphere></geometry><material><ambient>0 1 0 1</ambient><diffuse>0 1 0 1</diffuse></material></visual><collision name=\"collision\"><geometry><sphere><radius>0.2</radius></sphere></geometry></collision></link></model></sdf>"'
+  ```
+
+- **Red Ball**:
+  ```bash
+  ign service -s /world/empty/create --reqtype ignition.msgs.EntityFactory --reptype ignition.msgs.Boolean --timeout 1000 --req 'sdf: "<sdf version=\"1.6\"><model name=\"red_sphere\"><pose>7 2 0.5 0 0 0</pose><link name=\"link\"><visual name=\"visual\"><geometry><sphere><radius>0.2</radius></sphere></geometry><material><ambient>1 0 0 1</ambient><diffuse>1 0 0 1</diffuse></material></visual><collision name=\"collision\"><geometry><sphere><radius>0.2</radius></sphere></geometry></collision></link></model></sdf>"'
+  ```
+
+### 3. Run the Green Ball Follower Node
 To process camera images from `/camera/image_raw` and drive the robot towards a detected green ball:
 ```bash
 ros2 run ball_follower_interface_pkg green_ball_follower
 ```
 
-#### Node Visualization:
+#### 📐 Perception & Position Analysis Pipeline:
+```mermaid
+flowchart LR
+    A["Raw Image\n(BGR)"] --> B["HSV Conversion"]
+    B --> C["Mask\n(green threshold)"]
+    C --> D["Output\n(result)"]
+```
+
+#### 📺 OpenCV Imshow Visualization Output:
 The `green_ball_follower` node presents a single **2x2 tiled window** combining:
 - **Top-Left**: Camera Feed (with tracking circle overlays and status text)
 - **Top-Right**: HSV Color Space view
 - **Bottom-Left**: Binary Green Mask
 - **Bottom-Right**: Masked Output Result
+
+![OpenCV Imshow 2x2 Window](docs/images/imshow_output.png)
 
 ---
 
