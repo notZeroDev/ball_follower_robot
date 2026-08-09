@@ -1,6 +1,19 @@
 # Ball Follower ROS 2 Workspace
 
-A ROS 2 (Humble) mobile robot simulation workspace featuring differential drive control, Gazebo Harmonic simulation, and real-time computer vision tracking of a green ball using OpenCV.
+A ROS 2 (Humble) mobile robot simulation workspace featuring differential drive control, Gazebo Harmonic simulation, and real-time computer vision tracking of a green ball using OpenCV. The robot captures raw camera images from Gazebo, applies HSV color space thresholding to isolate target green spheres, and calculates angular and linear velocity commands to follow the ball in real time.
+
+---
+
+### 📐 Perception & Position Analysis Pipeline
+```mermaid
+flowchart LR
+    A["Raw Image\n(BGR)"] --> B["HSV Conversion"]
+    B --> C["Mask\n(green threshold)"]
+    C --> D["Output\n(result)"]
+```
+
+### 📺 OpenCV Imshow Visualization
+![OpenCV Imshow 2x2 Window](docs/images/imshow_output.png)
 
 ---
 
@@ -80,23 +93,6 @@ To process camera images from `/camera/image_raw` and drive the robot towards a 
 ```bash
 ros2 run ball_follower_interface_pkg green_ball_follower
 ```
-
-#### 📐 Perception & Position Analysis Pipeline:
-```mermaid
-flowchart LR
-    A["Raw Image\n(BGR)"] --> B["HSV Conversion"]
-    B --> C["Mask\n(green threshold)"]
-    C --> D["Output\n(result)"]
-```
-
-#### 📺 OpenCV Imshow Visualization Output:
-The `green_ball_follower` node presents a single **2x2 tiled window** combining:
-- **Top-Left**: Camera Feed (with tracking circle overlays and status text)
-- **Top-Right**: HSV Color Space view
-- **Bottom-Left**: Binary Green Mask
-- **Bottom-Right**: Masked Output Result
-
-![OpenCV Imshow 2x2 Window](docs/images/imshow_output.png)
 
 ---
 
