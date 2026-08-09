@@ -1,0 +1,3 @@
+[console_scripts]
+green_ball_follower = ball_follower_interface_pkg.green_ball_follower:main
+

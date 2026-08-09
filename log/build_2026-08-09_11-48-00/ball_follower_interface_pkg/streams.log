@@ -1,0 +1,19 @@
+[0.796s] Invoking command in '/home/zero/ball_follower/build/ball_follower_interface_pkg': PYTHONPATH=/home/zero/ball_follower/build/ball_follower_interface_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zero/ball_follower/install/ball_follower_interface_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/zero/ball_follower/build/ball_follower_interface_pkg/build --no-deps symlink_data --force
+[1.102s] running develop
+[1.381s] running egg_info
+[1.381s] writing ball_follower_interface_pkg.egg-info/PKG-INFO
+[1.382s] writing dependency_links to ball_follower_interface_pkg.egg-info/dependency_links.txt
+[1.382s] writing entry points to ball_follower_interface_pkg.egg-info/entry_points.txt
+[1.382s] writing requirements to ball_follower_interface_pkg.egg-info/requires.txt
+[1.382s] writing top-level names to ball_follower_interface_pkg.egg-info/top_level.txt
+[1.385s] reading manifest file 'ball_follower_interface_pkg.egg-info/SOURCES.txt'
+[1.387s] writing manifest file 'ball_follower_interface_pkg.egg-info/SOURCES.txt'
+[1.390s] running build_ext
+[1.392s] Creating /home/zero/ball_follower/install/ball_follower_interface_pkg/lib/python3.10/site-packages/ball-follower-interface-pkg.egg-link (link to .)
+[1.392s] Installing green_ball_follower script to /home/zero/ball_follower/install/ball_follower_interface_pkg/lib/ball_follower_interface_pkg
+[1.392s] 
+[1.393s] Installed /home/zero/ball_follower/build/ball_follower_interface_pkg
+[1.393s] running symlink_data
+[1.393s] symbolically linking /home/zero/ball_follower/build/ball_follower_interface_pkg/resource/ball_follower_interface_pkg -> /home/zero/ball_follower/install/ball_follower_interface_pkg/share/ament_index/resource_index/packages
+[1.393s] symbolically linking /home/zero/ball_follower/build/ball_follower_interface_pkg/package.xml -> /home/zero/ball_follower/install/ball_follower_interface_pkg/share/ball_follower_interface_pkg
+[1.448s] Invoked command in '/home/zero/ball_follower/build/ball_follower_interface_pkg' returned '0': PYTHONPATH=/home/zero/ball_follower/build/ball_follower_interface_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zero/ball_follower/install/ball_follower_interface_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/zero/ball_follower/build/ball_follower_interface_pkg/build --no-deps symlink_data --force

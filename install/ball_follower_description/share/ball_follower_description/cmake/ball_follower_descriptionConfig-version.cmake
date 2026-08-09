@@ -1,0 +1,1 @@
+/home/zero/ball_follower/build/ball_follower_description/ament_cmake_core/ball_follower_descriptionConfig-version.cmake

@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing ball_follower_interface_pkg.egg-info/PKG-INFO
+writing dependency_links to ball_follower_interface_pkg.egg-info/dependency_links.txt
+writing entry points to ball_follower_interface_pkg.egg-info/entry_points.txt
+writing requirements to ball_follower_interface_pkg.egg-info/requires.txt
+writing top-level names to ball_follower_interface_pkg.egg-info/top_level.txt
+reading manifest file 'ball_follower_interface_pkg.egg-info/SOURCES.txt'
+writing manifest file 'ball_follower_interface_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/zero/ball_follower/install/ball_follower_interface_pkg/lib/python3.10/site-packages/ball-follower-interface-pkg.egg-link (link to .)
+Installing green_ball_follower script to /home/zero/ball_follower/install/ball_follower_interface_pkg/lib/ball_follower_interface_pkg
+
+Installed /home/zero/ball_follower/build/ball_follower_interface_pkg
+running symlink_data
+symbolically linking /home/zero/ball_follower/build/ball_follower_interface_pkg/resource/ball_follower_interface_pkg -> /home/zero/ball_follower/install/ball_follower_interface_pkg/share/ament_index/resource_index/packages
+symbolically linking /home/zero/ball_follower/build/ball_follower_interface_pkg/package.xml -> /home/zero/ball_follower/install/ball_follower_interface_pkg/share/ball_follower_interface_pkg
